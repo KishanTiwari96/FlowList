@@ -6,7 +6,7 @@ import "./App.css"
 
 function App(){
   return(
-    <div className=" h-screen w-screen bg-[url(background.jpg)]">
+    <div ">
       <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<AppBar />}></Route>
@@ -23,7 +23,7 @@ function AppBar(){
   const navigate = useNavigate();
   return (
     <div className="font-semibold text-center">
-      <h1 className="mt-6 text-8xl pt-4 text-purple-900">To-Do App</h1>      
+      <h1 className="mt-6 text-8xl pt-4">To-Do App</h1>      
       <button className="border border-black-500 mt-20 text-2xl p-2  bg-gray-500 hover:bg-blue-500 rounded-md" onClick={()=>{
         navigate("/signup")
       }}>Sign Up</button>
