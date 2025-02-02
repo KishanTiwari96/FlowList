@@ -7,14 +7,13 @@ const cors = require("cors");
 const { authentication } = require("./Middleware");
 const app = express();
 
-app.use(express.json());
 app.use(cors({
     origin:["https://to-do-project-frontend.vercel.app"],
     methods : ["POST","GET","PUT","DELETE"],
     credentials : true
 }));
 
-
+app.use(express.json());
 app.post("/signup", async function(req,res){
     const{username,password} = req.body
 
