@@ -6,7 +6,7 @@ import "./App.css"
 
 function App(){
   return(
-    <div ">
+    <div >
       <BrowserRouter>
         <Routes>
           <Route path = "/" element = {<AppBar />}></Route>
