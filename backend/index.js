@@ -10,6 +10,7 @@ const app = express();
 app.use(cors({
     origin: ["https://to-do-project-frontend.vercel.app"],
     methods: ["POST","GET","PUT","DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true // Allow cookies for authenticated requests (if applicable)
   }));
 
@@ -147,4 +148,5 @@ app.delete("/deleteTodo", authentication,async(req,res)=>{
     })
 })
 
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => console.log(`Server running on port ${PORT}`));
