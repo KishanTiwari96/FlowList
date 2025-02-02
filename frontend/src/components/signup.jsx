@@ -13,11 +13,11 @@ export function Signup(){
             alert("username and password required")
         }
 
-        axios.post("https://to-do-project-henna.vercel.app/signup",{
+        axios.post("https://to-do-project-lovat.vercel.app/signup",{
             username : user,
             password : pass
         }).then((res)=>{
-            axios.post("https://to-do-project-henna.vercel.app/login",{
+            axios.post("https://to-do-project-lovat.vercel.app/login",{
                 username : user,
                 password : pass
             }).then((res)=>{
