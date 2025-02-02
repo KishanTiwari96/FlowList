@@ -8,10 +8,10 @@ const { authentication } = require("./Middleware");
 const app = express();
 
 app.use(cors({
-    origin:["https://to-do-project-frontend.vercel.app"],
-    methods : ["POST","GET","PUT","DELETE"],
-    credentials : true
-}));
+    origin: ["https://to-do-project-frontend.vercel.app"],
+    methods: ["POST","GET","PUT","DELETE"],
+    credentials: true // Allow cookies for authenticated requests (if applicable)
+  }));
 
 app.use(express.json());
 app.post("/signup", async function(req,res){
