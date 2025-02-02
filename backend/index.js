@@ -8,7 +8,11 @@ const { authentication } = require("./Middleware");
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:["https://to-do-project-henna.vercel.app"],
+    methods : ["POST","GET","PUT","DELETE"],
+    credentials : true
+}));
 
 
 app.post("/signup", async function(req,res){
