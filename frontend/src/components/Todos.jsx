@@ -8,7 +8,7 @@ export function Todos() {
     const token = sessionStorage.getItem("token");
 
     useEffect(() => {
-        axios.get("https://to-do-project-henna.vercel.app/todos", {
+        axios.get("https://to-do-project-lovat.vercel.app/todos", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -25,7 +25,7 @@ export function Todos() {
             return;
         }
 
-        axios.post("https://to-do-project-henna.vercel.app/addTodo", {
+        axios.post("https://to-do-project-lovat.vercel.app/addTodo", {
             title: title,
             description: description
         }, {
@@ -42,7 +42,7 @@ export function Todos() {
     }
 
     function updateTodo(todo) {
-        axios.put("https://to-do-project-henna.vercel.app/updateTodo", {
+        axios.put("https://to-do-project-lovat.vercel.app/updateTodo", {
             title: todo.title
         }, {
             headers: {
@@ -60,7 +60,7 @@ export function Todos() {
     }
 
     function deleteTodo(todo) {
-        axios.delete("https://to-do-project-henna.vercel.app/deleteTodo", {
+        axios.delete("https://to-do-project-lovat.vercel.app/deleteTodo", {
             headers: {
                 Authorization: `Bearer ${token}`
             },
