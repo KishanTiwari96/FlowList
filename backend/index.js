@@ -8,7 +8,7 @@ const { authentication } = require("./Middleware");
 const app = express();
 
 app.use(cors({
-    origin: "https://todo-aig4sp4rf-kishan-tiwaris-projects.vercel.app", 
+    origin: "*", 
     methods: ["POST", "GET", "PUT", "DELETE"],  
     allowedHeaders: ["Content-Type", "Authorization"], 
     credentials: true
