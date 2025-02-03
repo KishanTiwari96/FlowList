@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 export function Bottomwarning({label,buttonText,to}){
     return(
-        <div className="text-2xl flex pt-2">
+        <div className="text-2xl flex pt-2 text-white">
             <div>
                 {label}
             </div>

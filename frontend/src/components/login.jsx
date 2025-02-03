@@ -32,13 +32,13 @@ export function Login(){
     }
 
     return(
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-black h-screen w-screen">
            <div className="flex flex-col items-center">
-                <h1 className="mt-6 text-6xl pt-4 font-bold ">To-Do App</h1>
-                <input className="w-full border border-gray-500 rounded-sm py-1 mt-8 p-1" type="text" placeholder="Enter Username" onChange={(e)=>{
+                <h1 className="mt-6 text-6xl pt-4 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">To-Do App</h1>
+                <input className="w-full border border-gray-500 rounded-sm py-1 mt-8 p-1 text-white" type="text" placeholder="Enter Username" onChange={(e)=>{
                     setUsername(e.target.value);
                 }}/> <br />
-                <input className="w-full border border-gray-500 rounded-sm py-1 p-1" type="text" placeholder="Enter Password" onChange={(e)=>{
+                <input className="w-full border border-gray-500 rounded-sm py-1 p-1 text-white" type="text" placeholder="Enter Password" onChange={(e)=>{
                     setPassword(e.target.value);
                 }}/> <br />
                 <button className="border border-black-500 mt-2 text-2xl p-2  bg-gray-500 hover:bg-blue-500 rounded-md" onClick={handleLogin}>Submit</button>
