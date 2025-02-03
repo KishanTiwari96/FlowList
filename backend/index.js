@@ -8,13 +8,13 @@ const { authentication } = require("./Middleware");
 const app = express();
 
 app.use(cors({
-    origin: ["https://to-do-project-frontend.vercel.app"],
-    methods: ["POST","GET","PUT","DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: "https://todo-aig4sp4rf-kishan-tiwaris-projects.vercel.app", 
+    methods: ["POST", "GET", "PUT", "DELETE"],  
+    allowedHeaders: ["Content-Type", "Authorization"], 
     credentials: true
-  }));
+}));
+
 app.use(express.json());
-app.use(cors());
 
 
 app.post("/signup", async function(req,res){
@@ -150,6 +150,5 @@ app.delete("/deleteTodo", authentication,async(req,res)=>{
     })
 })
 
-app.listen(3000);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, "0.0.0.0", () => console.log(`Server running on port ${PORT}`));
