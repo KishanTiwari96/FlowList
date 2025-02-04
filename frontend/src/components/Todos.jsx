@@ -8,7 +8,7 @@ export function Todos() {
     const token = sessionStorage.getItem("token");
 
     useEffect(() => {
-        axios.get("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/todos", {
+        axios.get("https://to-do-wine-tau.vercel.app/todos", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -25,7 +25,7 @@ export function Todos() {
             return;
         }
 
-        axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/addTodo", {
+        axios.post("https://to-do-wine-tau.vercel.app/addTodo", {
             title: title,
             description: description
         }, {
@@ -42,7 +42,7 @@ export function Todos() {
     }
 
     function updateTodo(todo) {
-        axios.put("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/updateTodo", {
+        axios.put("https://to-do-wine-tau.vercel.app/updateTodo", {
             title: todo.title
         }, {
             headers: {
@@ -60,7 +60,7 @@ export function Todos() {
     }
 
     function deleteTodo(todo) {
-        axios.delete("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/deleteTodo", {
+        axios.delete("https://to-do-wine-tau.vercel.app/deleteTodo", {
             headers: {
                 Authorization: `Bearer ${token}`
             },
