@@ -13,7 +13,7 @@ export function Login(){
             alert("username and password required")
         }
 
-        axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/login",{
+        axios.post("https://to-do-wine-tau.vercel.app/login",{
             username : username,
             password : password
         }).then((res)=>{
