@@ -13,11 +13,11 @@ export function Signup(){
             alert("username and password required")
         }
 
-        axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/signup",{
+        axios.post("https://to-do-wine-tau.vercel.app/signup",{
             username : user,
             password : pass
         }).then((res)=>{
-            axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/login",{
+            axios.post("https://to-do-wine-tau.vercel.app/login",{
                 username : user,
                 password : pass
             }).then((res)=>{
