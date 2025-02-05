@@ -29,7 +29,7 @@ export function Signup(){
             })
         }).catch((err)=>{
             if(err.response){
-                if(err.response.status == 409){
+                if(err.response.status == 411){
                     alert("Username already taken")
                 }else if(err.response && err.response.data.error){
                     alert(err.response.data.error)
