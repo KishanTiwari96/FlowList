@@ -8,7 +8,7 @@ export function Todos() {
     const token = sessionStorage.getItem("token");
 
     useEffect(() => {
-        axios.get("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/todos", {
+        axios.get("http://localhost:3000/todos", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -25,7 +25,7 @@ export function Todos() {
             return;
         }
 
-        axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/addTodo", {
+        axios.post("http://localhost:3000/addTodo", {
             title: title,
             description: description
         }, {
@@ -42,7 +42,7 @@ export function Todos() {
     }
 
     function updateTodo(todo) {
-        axios.put("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/updateTodo", {
+        axios.put("http://localhost:3000/updateTodo", {
             title: todo.title
         }, {
             headers: {
@@ -60,7 +60,7 @@ export function Todos() {
     }
 
     function deleteTodo(todo) {
-        axios.delete("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/deleteTodo", {
+        axios.delete("http://localhost:3000/deleteTodo", {
             headers: {
                 Authorization: `Bearer ${token}`
             },
@@ -74,8 +74,8 @@ export function Todos() {
         })
     }
     return (
-        <div className="flex justify-center">
-            <div className="flex flex-col items-center bg-black h-screen w-screen">
+        <div className="flex justify-center  bg-black min-h-screen w-screen">
+            <div className="flex flex-col items-center">
                 <h1 className="text-6xl pt-6 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">To-Do App</h1>
                 <div className="flex flex-col items-center">
                     <input className="w-full border border-gray-500 rounded-sm py-1 mt-8 p-1 text-white" type="text" placeholder="Enter Title" onChange={(e) => {
@@ -84,13 +84,13 @@ export function Todos() {
                     <input className="w-full border border-gray-500 rounded-sm py-1 mt-4 p-1 text-white" type="text" placeholder="Enter Description" onChange={(e) => {
                         setDescription(e.target.value)
                     }} />
-                    <button className="border border-black-500 mt-6 text-2xl p-2  bg-gray-500 hover:bg-blue-500 rounded-md" onClick={addTodo} >Add todo</button>
+                    <button className="border border-black-500 mt-6 text-2xl p-2 bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl rounded-md" onClick={addTodo} >Add todo</button>
                 </div>
                 <h2 className="text-xl font-bold mt-4">Your current todos</h2>
                 {todos.length == 0 ? (<p>No todo now</p>) : (
                     todos.map((todo, index) => {
-                        return <div key={index} className="bg-slate-300 w-full flex justify-between border border-black rounded-sm items-center">
-                            <div className="flex flex-col font-semibold p-3">
+                        return <div key={index} className="bg-slate-500 w-full flex justify-between border border-black rounded-sm items-center">
+                            <div className="flex flex-col font-semibold p-3 ">
                                 <h3 className="text-2xl">{todo.title}</h3>
                                 <h4 className="text-sm">{todo.description}</h4>
                             </div>
@@ -101,7 +101,7 @@ export function Todos() {
                                     }}></i> 
                                 </div>
                                 
-                                <button className="border border-gray-500 rounded-sm mr-1 hover:bg-blue-400" onClick={() => {
+                                <button className="bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl  border border-gray-500 rounded-sm mr-1 hover:bg-blue-400" onClick={() => {
                                     updateTodo(todo)
                                 }}>{todo.completed ? "Completed" : "Mark as done"}
                                 </button>

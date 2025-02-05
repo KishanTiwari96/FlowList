@@ -13,11 +13,11 @@ export function Signup(){
             alert("username and password required")
         }
 
-        axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/signup",{
+        axios.post("http://localhost:3000/signup",{
             username : user,
             password : pass
         }).then((res)=>{
-            axios.post("https://todo-app-backend-3dpugmeq6-kishan-tiwaris-projects.vercel.app/login",{
+            axios.post("http://localhost:3000/login",{
                 username : user,
                 password : pass
             }).then((res)=>{
@@ -50,7 +50,7 @@ export function Signup(){
                 <input className="w-full border border-gray-500 rounded-sm py-1 p-1 text-white" type="text" placeholder="Enter Password" onChange={(e)=>{
                     setPass(e.target.value);
                 }}/> <br />
-                <button className="border border-black-500 mt-2 text-2xl p-2  bg-gray-500 hover:bg-blue-500 rounded-md" onClick={handleSignUp}>Submit</button>
+                <button className="border border-black-500 mt-2 text-2xl p-2 bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl rounded-md" onClick={handleSignUp}>Submit</button>
                 <Bottomwarning label={"Already have an account ? "} buttonText={"Login"} to={"/login"}></Bottomwarning>
             </div>
         </div>
