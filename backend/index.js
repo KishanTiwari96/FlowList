@@ -7,7 +7,11 @@ const cors = require("cors");
 const { authentication } = require("./Middleware");
 const app = express();
 
-app.use(cors())
+app.use(cors({
+    origin: ["https://to-do-41d6.vercel.app"],
+    methods: ["POST","GET","PUT","DELETE"],
+    credentials: true 
+  }));
 app.use(express.json());
 
 
@@ -144,4 +148,6 @@ app.delete("/deleteTodo", authentication,async(req,res)=>{
     })
 })
 
-app.listen(3000);
+app.listen(5000,()=>{
+    console.log("Server Running")
+});
