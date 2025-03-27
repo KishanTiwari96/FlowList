@@ -76,7 +76,7 @@ export function Todos() {
     return (
         <div className="flex justify-center  bg-black min-h-screen w-screen">
             <div className="flex flex-col items-center">
-                <h1 className="text-6xl pt-6 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">To-Do App</h1>
+                <h1 className="text-6xl pt-6 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">Flow List</h1>
                 <div className="flex flex-col items-center">
                     <input className="w-full border border-gray-500 rounded-sm py-1 mt-8 p-1 text-white" type="text" placeholder="Enter Title" onChange={(e) => {
                         setTitle(e.target.value)
