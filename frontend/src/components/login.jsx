@@ -34,7 +34,7 @@ export function Login(){
     return(
         <div className="flex justify-center bg-black h-screen w-screen">
            <div className="flex flex-col items-center">
-                <h1 className="mt-6 text-6xl pt-4 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">To-Do App</h1>
+                <h1 className="mt-6 text-6xl pt-4 font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">Flow List</h1>
                 <input className="w-full border border-gray-500 rounded-sm py-1 mt-8 p-1 text-white" type="text" placeholder="Enter Username" onChange={(e)=>{
                     setUsername(e.target.value);
                 }}/> <br />
